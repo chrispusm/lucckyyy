@@ -1,0 +1,44 @@
+int math, english, science, total;
+double avg;
+string grade;
+
+math = int.Parse(txtmath.Text);
+english = int.Parse(txteng.Text);
+science = int.Parse(txtsci.Text);
+
+total = math + english + science;
+txttot.Text = total.ToString();
+
+avg = total / 3.0; // Ensure division is done in double
+txtavg.Text = avg.ToString("F2"); // Format to 2 decimal places
+
+if (avg >= 75)
+{
+    grade = "A";
+}
+else if (avg >= 70)
+{
+    grade = "B";
+}
+else if (avg >= 65)
+{
+    grade = "C";
+}
+else if (avg >= 60)
+{
+    grade = "D";
+}
+else if (avg >= 55)
+{
+    grade = "E";
+}
+else if (avg >= 50)
+{
+    grade = "F";
+}
+else
+{
+    grade = "S";
+}
+
+txtgrade.Text = grade;
